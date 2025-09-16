@@ -1,42 +1,63 @@
 'use client'
 
 import Container from '../common/Container/Container'
-import MainNavigation from './MainNavigation'
-import UserNavigation from './UserNavigation'
-import Logo from './Logo'
-import ActionButton from './ActionButton'
+import RegisterButton from './RegisterButton'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import { FaRegBell } from 'react-icons/fa'
 import IconButton from '../common/IconButton/IconButton'
+import { useState } from 'react'
+import BurgerMenu from './BurgerMenu'
+import HeaderMainNavigationList from './HeaderMainNavigationList'
+import HeaderUserNavigationList from './HeaderUserNavigationList'
+import HeaderLogo from './HeaderLogo'
 
 const Header = () => {
+	const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
 	const { windowWidth } = useWindowWidth()
 	return (
-		<div className='flex items-center h-[72px] bg-background-light-black'>
-			<Container>
-				<nav className='flex items-center justify-between'>
-					<Logo />
+		<>
+			{isBurgerMenuOpen && (
+				<BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+			)}
+			<div className='flex items-center h-[72px] bg-background-light-black'>
+				<Container>
+					<nav className='flex items-center justify-between'>
+						<HeaderLogo />
 
-					{windowWidth <= 755 && (
-						<div>
-							{windowWidth > 575 && <IconButton icon={FaRegBell} />}
-							<IconButton icon={GiHamburgerMenu} />
-						</div>
-					)}
-
-					{windowWidth > 755 && (
-						<>
-							<MainNavigation />
-							<div className='flex'>
-								<UserNavigation windowWidth={windowWidth} />
-								{windowWidth >= 1014 && <ActionButton />}
+						{windowWidth <= 755 && (
+							<div>
+								{windowWidth > 575 && (
+									<IconButton
+										icon={FaRegBell}
+										ariaLabel='Notifications button'
+									/>
+								)}
+								<IconButton
+									icon={GiHamburgerMenu}
+									onClick={() => setIsBurgerMenuOpen(true)}
+									ariaLabel='Menu button'
+								/>
 							</div>
-						</>
-					)}
-				</nav>
-			</Container>
-		</div>
+						)}
+
+						{windowWidth > 755 && (
+							<>
+								<HeaderMainNavigationList />
+								<div className='flex'>
+									<HeaderUserNavigationList windowWidth={windowWidth} />
+									{windowWidth >= 1014 && (
+										<div className='ml-lg'>
+											<RegisterButton />
+										</div>
+									)}
+								</div>
+							</>
+						)}
+					</nav>
+				</Container>
+			</div>
+		</>
 	)
 }
 

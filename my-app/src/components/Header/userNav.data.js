@@ -2,33 +2,28 @@ import { FaRegBell, FaRegStar } from 'react-icons/fa'
 import { RiParkingBoxLine } from 'react-icons/ri'
 import { CgProfile } from 'react-icons/cg'
 
+const commonStyle =
+	'fill-light-grey transition linear duration-300 group-hover:fill-light-white'
+
 export const userDesktopNav = [
-	<FaRegBell
-		key='bell'
-		className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
-		size={20}
-	/>,
-	<FaRegStar
-		key='star'
-		className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
-		size={20}
-	/>,
-	<RiParkingBoxLine
-		key='parking'
-		className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
-		size={20}
-	/>,
+	{
+		icon: <FaRegBell key='bell' className={commonStyle} size={20} />,
+	},
+	{
+		src: '',
+		icon: <FaRegStar key='star' className={commonStyle} size={20} />,
+	},
+	{
+		src: '',
+		icon: <RiParkingBoxLine key='parking' className={commonStyle} size={20} />,
+	},
 ]
 
 export const userTabletNav = [
-	<FaRegBell
-		key='bell'
-		className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
-		size={20}
-	/>,
-	<CgProfile
-		key='profile'
-		className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
-		size={20}
-	/>,
+	{
+		icon: <FaRegBell key='bell' className={commonStyle} size={20} />,
+	},
+	{
+		icon: <CgProfile key='profile' className={commonStyle} size={20} />,
+	},
 ]

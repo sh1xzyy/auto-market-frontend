@@ -2,15 +2,16 @@
 
 import { IoIosArrowDown } from 'react-icons/io'
 import { mainNav } from './mainNav.data'
-import { useState } from 'react'
 import DropDownMenu from './DropDownMenu'
 import { searchDropDownMenu } from './searchDropDownMenu.data'
 import { sellDropDownMenu } from './sellDropDownMenu.data'
 import { infoDropDownMenu } from './infoDropDownMenu.data'
+import DropDownMainListContent from './DropDownMainListContent'
+import { useState } from 'react'
 
 const dropDownByIndex = [searchDropDownMenu, sellDropDownMenu, infoDropDownMenu]
 
-const MainNavigation = () => {
+const HeaderMainNavigationList = () => {
 	const [openIndex, setOpenIndex] = useState(null)
 
 	return (
@@ -30,7 +31,11 @@ const MainNavigation = () => {
 							/>
 						</button>
 
-						{openIndex === i && <DropDownMenu list={dropDownByIndex[i]} />}
+						{openIndex === i && (
+							<DropDownMenu>
+								<DropDownMainListContent list={dropDownByIndex[i]} />
+							</DropDownMenu>
+						)}
 					</li>
 				)
 			})}
@@ -38,4 +43,4 @@ const MainNavigation = () => {
 	)
 }
 
-export default MainNavigation
+export default HeaderMainNavigationList
