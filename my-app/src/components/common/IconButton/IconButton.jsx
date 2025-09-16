@@ -4,16 +4,12 @@ const IconButton = ({
 	icon: Icon,
 	size = 20,
 	onClick,
-	className = '',
+	className = 'px-md py-md',
 	ariaLabel,
-	children,
 }) => {
 	return (
 		<button
-			className={clsx(
-				'group px-md py-md transition-colors duration-300',
-				className
-			)}
+			className={clsx('group transition-colors duration-300', className)}
 			type='button'
 			onClick={onClick}
 			aria-label={ariaLabel}
@@ -22,7 +18,6 @@ const IconButton = ({
 				className='fill-light-grey transition-colors duration-300 group-hover:fill-light-white'
 				size={size}
 			/>
-			{children}
 		</button>
 	)
 }

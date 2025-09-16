@@ -9,6 +9,8 @@
 	--color-dark-white: #e6eaf0;
 	--color-light-grey: rgb(185, 191, 199);
 	--color-dark-grey: #b9bfc7;
+	--color-overlay: #0a0d14a3;
+	--color-grey: rgb(42, 43, 51);
 	--color-light-orange: #db3000;
 	--color-background-light-black: #1b1b21;
 	--color-background-dark-black: rgb(16, 16, 20);
@@ -28,10 +30,11 @@
 	--spacing-lg: 16px;
 	--spacing-2lg: 18px;
 	--spacing-xl: 24px;
-	--spacing-2xl: 32px;
+	--spacing-2xl: 36px;
 
 	/* Tracking */
 	--tracking-md: 1.1;
+	--tracking-lg: 2;
 
 	/* Border radius */
 	--radius-sm: 4px;
@@ -40,6 +43,9 @@
 
 	/* Max-w */
 	--max-width-lg: 1014px;
+
+	/* Shadows */
+	--shadow-card: inset 1px 0px 5px 5px var(--color-dark-violet);
 }
 
 @layer base {
