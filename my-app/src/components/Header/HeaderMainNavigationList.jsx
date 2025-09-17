@@ -6,8 +6,9 @@ import DropDownMenu from './DropDownMenu'
 import { searchDropDownMenu } from './searchDropDownMenu.data'
 import { sellDropDownMenu } from './sellDropDownMenu.data'
 import { infoDropDownMenu } from './infoDropDownMenu.data'
-import DropDownMainListContent from './DropDownMainListContent'
 import { useState } from 'react'
+import DropDownMainList from './DropDownMainList'
+import clsx from 'clsx'
 
 const dropDownByIndex = [searchDropDownMenu, sellDropDownMenu, infoDropDownMenu]
 
@@ -26,14 +27,20 @@ const HeaderMainNavigationList = () => {
 						>
 							<span>{title}</span>
 							<IoIosArrowDown
-								className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
+								className={clsx(
+									'fill-light-grey transition linear duration-300 group-hover:fill-light-white',
+									openIndex === i && 'rotate-180'
+								)}
 								size={16}
 							/>
 						</button>
 
 						{openIndex === i && (
-							<DropDownMenu>
-								<DropDownMainListContent list={dropDownByIndex[i]} />
+							<DropDownMenu
+								className='w-[570px] p-2lg left-1/2 -translate-x-1/2'
+								iconClass='left-1/2 -translate-x-1/2'
+							>
+								<DropDownMainList list={dropDownByIndex[i]} />
 							</DropDownMenu>
 						)}
 					</li>

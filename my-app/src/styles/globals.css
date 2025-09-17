@@ -9,6 +9,7 @@
 	--color-dark-white: #e6eaf0;
 	--color-light-grey: rgb(185, 191, 199);
 	--color-dark-grey: #b9bfc7;
+	--color-super-grey: #7e838f;
 	--color-overlay: #0a0d14a3;
 	--color-grey: rgb(42, 43, 51);
 	--color-light-orange: #db3000;
@@ -25,16 +26,13 @@
 	/* Spacing (margin/padding) */
 	--spacing-xs: 2px;
 	--spacing-sm: 4px;
-	--spacing-2sm: 4px;
+	--spacing-2sm: 7px;
 	--spacing-md: 9px;
+	--spacing-2md: 12px;
 	--spacing-lg: 16px;
 	--spacing-2lg: 18px;
 	--spacing-xl: 24px;
 	--spacing-2xl: 36px;
-
-	/* Tracking */
-	--tracking-md: 1.1;
-	--tracking-lg: 2;
 
 	/* Border radius */
 	--radius-sm: 4px;
@@ -102,5 +100,18 @@
 		clip-path: inset(100%);
 		clip: rect(0 0 0 0);
 		overflow: hidden;
+	}
+}
+
+.dropDownAnimation {
+	animation: smooth-appearance 300ms;
+}
+
+@keyframes smooth-appearance {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

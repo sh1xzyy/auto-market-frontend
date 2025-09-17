@@ -4,7 +4,7 @@ import Link from 'next/link'
 const BurgerDropDownMenuCategoryItemList = ({ list }) => {
 	return (
 		<ul>
-			{list.map(({ src, label, isNew }, i) => (
+			{list.map(({ src, icon, label, isNew }, i) => (
 				<li key={i} className='border-b border-grey last:border-0'>
 					<Link
 						className={clsx(
@@ -13,12 +13,15 @@ const BurgerDropDownMenuCategoryItemList = ({ list }) => {
 						)}
 						href={src}
 					>
-						<span className='block max-w-[185px]'>{label}</span>
-						{isNew && (
-							<span className='font-bold text-sm rounded-md px-2sm py-xs ml-sm bg-light-blue'>
-								NEU
-							</span>
-						)}
+						<div className='flex items-center gap-md'>
+							<span className='block max-w-[185px]'>{icon}</span>
+							<span className='block max-w-[185px]'>{label}</span>
+							{isNew && (
+								<span className='font-bold text-sm rounded-md px-sm py-xs bg-light-blue'>
+									NEU
+								</span>
+							)}
+						</div>
 					</Link>
 				</li>
 			))}
