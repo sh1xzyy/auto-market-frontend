@@ -12,7 +12,7 @@ const DropDownItemMain = ({ item: { thumb, moreInfo } }) => {
 				alt={thumb.alt}
 			/>
 			<Link
-				className='block font-medium -ml-md mt-2sm px-md py-md text-md text-dark-grey  transition linear duration-300 hover:text-dark-white hover:underline'
+				className='block font-medium -ml-md mt-md px-md py-md text-md text-dark-grey  transition linear duration-300 hover:text-dark-white hover:underline'
 				href={moreInfo.src}
 			>
 				{moreInfo.label}

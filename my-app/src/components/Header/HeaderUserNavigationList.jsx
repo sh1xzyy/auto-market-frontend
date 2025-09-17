@@ -4,6 +4,10 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { userDesktopNav, userTabletNav } from './userNav.data'
 import Link from 'next/link'
 import { useState } from 'react'
+import DropDownMenu from './DropDownMenu'
+import DropDownNotification from './DropDownNotification'
+import DropDownUserInfo from './DropDownUserInfo'
+import clsx from 'clsx'
 
 const HeaderUserNavigationList = ({ windowWidth }) => {
 	const [openIndex, setOpenIndex] = useState(null)
@@ -23,18 +27,39 @@ const HeaderUserNavigationList = ({ windowWidth }) => {
 						</Link>
 					) : (
 						<button
-							className='group flex items-center justify-center gap-xs px-md py-md'
+							className='group flex items-center justify-center gap-sm px-md py-md'
 							type='button'
 							onClick={() => setOpenIndex(prev => (prev === i ? null : i))}
 						>
-							{item?.icon}
+							{item.icon}
 							{windowWidth > 755 && windowWidth < 1014 && i === 1 && (
 								<IoIosArrowDown
-									className='fill-light-grey transition linear duration-300 group-hover:fill-light-white'
+									className={clsx(
+										'fill-light-grey transition linear duration-300 group-hover:fill-light-white',
+										openIndex === i && 'rotate-180'
+									)}
 									size={16}
 								/>
 							)}
 						</button>
+					)}
+
+					{openIndex === i && i === 0 && (
+						<DropDownMenu
+							className='w-[345px] py-lg -right-[60px]'
+							iconClass='right-[18%]'
+						>
+							<DropDownNotification />
+						</DropDownMenu>
+					)}
+
+					{openIndex === i && i === 1 && (
+						<DropDownMenu
+							className='w-[170px] py-md px-2lg right-0'
+							iconClass='right-[10%]'
+						>
+							<DropDownUserInfo />
+						</DropDownMenu>
 					)}
 				</li>
 			))}

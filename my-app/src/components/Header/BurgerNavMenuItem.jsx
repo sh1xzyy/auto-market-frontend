@@ -21,7 +21,13 @@ const BurgerNavMenuItem = ({ item, i }) => {
 				onClick={() => setOpenIndex(prev => (prev === i ? null : i))}
 			>
 				<span>{item.title}</span>
-				<IoIosArrowDown className='fill-light-grey' size={16} />
+				<IoIosArrowDown
+					className={clsx(
+						'fill-light-grey transition linear duration-300',
+						openIndex === i && 'rotate-180'
+					)}
+					size={16}
+				/>
 			</button>
 			{openIndex === i && <BurgerDropDownMenuCategoryList list={item.list} />}
 		</li>

@@ -11,7 +11,7 @@ const DropDownSubItem = ({ el: { src, label, isNew } }) => {
 					{label}
 				</Link>
 				{isNew && (
-					<span className='font-bold text-sm rounded-md px-2sm py-xs bg-light-blue'>
+					<span className='font-bold text-sm rounded-md px-md py-xs bg-light-blue'>
 						NEU
 					</span>
 				)}

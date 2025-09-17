@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import DropDownItemList from './DropDownItemList'
 import DropDownItemMain from './DropDownItemMain'
 
-const DropDownMainListContent = ({ list }) => {
+const DropDownMainList = ({ list }) => {
 	return (
 		<ul className='flex gap-2lg'>
 			{list.map((item, i) => {
@@ -29,4 +29,4 @@ const DropDownMainListContent = ({ list }) => {
 	)
 }
 
-export default DropDownMainListContent
+export default DropDownMainList
