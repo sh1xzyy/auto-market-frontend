@@ -36,7 +36,7 @@ const Header = () => {
 								<IconButton
 									icon={GiHamburgerMenu}
 									onClick={() => setIsBurgerMenuOpen(true)}
-									ariaLabel='Menu button'
+									ariaLabel='Burger Menu button'
 								/>
 							</div>
 						)}
