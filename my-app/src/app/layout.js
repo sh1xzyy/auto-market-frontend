@@ -2,12 +2,6 @@ import { Inter, Roboto } from 'next/font/google'
 import '../styles/globals.css'
 import Header from '@/components/Header/Header'
 
-const inter = Inter({
-	weight: ['400', '500', '600', '700', '800', '900'],
-	variable: '--font-inter',
-	subsets: ['latin'],
-})
-
 const roboto = Roboto({
 	weight: ['400', '500', '600', '700', '800', '900'],
 	variable: '--font-roboto',
@@ -22,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.variable} ${roboto.variable} antialiased`}>
+			<body className={`${roboto.variable} antialiased`}>
 				<Header />
 				{children}
 			</body>
