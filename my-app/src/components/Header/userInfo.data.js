@@ -1,4 +1,4 @@
-import { CgProfile } from 'react-icons/cg'
+import { FaRegUserCircle } from 'react-icons/fa'
 import { FaRegStar } from 'react-icons/fa'
 import { iconsStyle } from './commonStyles'
 
@@ -11,6 +11,6 @@ export const userInfo = [
 	{
 		title: 'Parkplatz',
 		src: '',
-		icon: <CgProfile key='profile' className={iconsStyle} size={16} />,
+		icon: <FaRegUserCircle key='profile' className={iconsStyle} size={16} />,
 	},
 ]

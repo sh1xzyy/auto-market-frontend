@@ -6,6 +6,7 @@ const IconButton = ({
 	onClick,
 	className = 'px-md py-md',
 	ariaLabel,
+	children,
 }) => {
 	return (
 		<button
@@ -18,6 +19,7 @@ const IconButton = ({
 				className='fill-light-grey transition-colors duration-300 group-hover:fill-light-white'
 				size={size}
 			/>
+			{children}
 		</button>
 	)
 }

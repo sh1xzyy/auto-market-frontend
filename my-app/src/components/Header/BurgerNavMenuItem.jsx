@@ -1,13 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import BurgerDropDownMenuCategoryList from './BurgerDropDownMenuCategoryList'
 import { IoIosArrowDown } from 'react-icons/io'
 import clsx from 'clsx'
 
-const BurgerNavMenuItem = ({ item, i }) => {
-	const [openIndex, setOpenIndex] = useState(null)
-
+const BurgerNavMenuItem = ({ item, i, openIndex, setOpenIndex }) => {
 	return (
 		<li
 			className={clsx(

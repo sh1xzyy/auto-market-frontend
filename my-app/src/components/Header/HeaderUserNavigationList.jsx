@@ -8,6 +8,7 @@ import DropDownMenu from './DropDownMenu'
 import DropDownNotification from './DropDownNotification'
 import DropDownUserInfo from './DropDownUserInfo'
 import clsx from 'clsx'
+import IconButton from '../common/IconButton/IconButton'
 
 const HeaderUserNavigationList = ({ windowWidth }) => {
 	const [openIndex, setOpenIndex] = useState(null)
@@ -22,16 +23,16 @@ const HeaderUserNavigationList = ({ windowWidth }) => {
 			{navigationList.map((item, i) => (
 				<li className='relative' key={i}>
 					{item.hasOwnProperty('src') ? (
-						<Link className='block px-md py-md' href={item?.src}>
+						<Link className='group block px-md py-md' href={item?.src}>
 							{item?.icon}
 						</Link>
 					) : (
-						<button
-							className='group flex items-center justify-center gap-sm px-md py-md'
-							type='button'
+						<IconButton
+							className='flex items-center justify-center gap-sm px-md py-md'
 							onClick={() => setOpenIndex(prev => (prev === i ? null : i))}
+							icon={item.icon}
+							ariaLabel={item.ariaLabel}
 						>
-							{item.icon}
 							{windowWidth > 755 && windowWidth < 1014 && i === 1 && (
 								<IoIosArrowDown
 									className={clsx(
@@ -41,7 +42,7 @@ const HeaderUserNavigationList = ({ windowWidth }) => {
 									size={16}
 								/>
 							)}
-						</button>
+						</IconButton>
 					)}
 
 					{openIndex === i && i === 0 && (
