@@ -46,7 +46,7 @@ const HeaderUserNavigationList = ({ windowWidth }) => {
 
 					{openIndex === i && i === 0 && (
 						<DropDownMenu
-							className='w-[345px] py-lg -right-[60px]'
+							className='w-[360px] py-lg -right-[60px] max-h-[450px] overflow-y-auto custom-scroll'
 							iconClass='right-[18%]'
 						>
 							<DropDownNotification />

@@ -103,6 +103,23 @@
 	}
 }
 
+/* Базовый стиль для скроллбара */
+.custom-scroll::-webkit-scrollbar {
+	width: 8px; /* ширина полосы прокрутки */
+}
+
+/* Цвет дорожки */
+.custom-scroll::-webkit-scrollbar-track {
+	background: var(--color-grey);
+	border-radius: 10px;
+}
+
+/* Цвет бегунка */
+.custom-scroll::-webkit-scrollbar-thumb {
+	background: var(--color-super-grey);
+	border-radius: 10px;
+}
+
 .dropDownAnimation {
 	animation: smooth-appearance 300ms;
 }
