@@ -13,6 +13,8 @@
 	--color-overlay: #0a0d14a3;
 	--color-grey: rgb(42, 43, 51);
 	--color-light-orange: #db3000;
+	--color-dark-orange: #bf2a00;
+	--color-black: #14141a;
 	--color-background-light-black: #1b1b21;
 	--color-background-dark-black: rgb(16, 16, 20);
 
@@ -89,7 +91,7 @@
 		display: block;
 	}
 
-	.visually__hidden {
+	.visually-hidden {
 		position: absolute;
 		width: 1px;
 		height: 1px;
