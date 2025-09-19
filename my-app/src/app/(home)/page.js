@@ -1,3 +1,11 @@
+import MainFilters from '@/components/MainFilters/MainFilters'
+
 export default function Home() {
-	return <div className='w-[100vh] h-[100vh]'></div>
+	return (
+		<div>
+			<section className='py-2sm'>
+				<MainFilters />
+			</section>
+		</div>
+	)
 }
