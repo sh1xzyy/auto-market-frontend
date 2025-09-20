@@ -1,12 +1,25 @@
 import { IoSearch } from 'react-icons/io5'
-import { MdOutlineEnergySavingsLeaf } from 'react-icons/md'
+import { MdEnergySavingsLeaf, MdFrontLoader } from 'react-icons/md'
 import { RiResetLeftFill } from 'react-icons/ri'
 import { VscSettings } from 'react-icons/vsc'
-import { PiTruck } from 'react-icons/pi'
+import { PiTruck, PiWarningCircleLight } from 'react-icons/pi'
 import { HiMiniTruck } from 'react-icons/hi2'
 import { FaBus, FaTractor, FaTruckMoving, FaTrailer } from 'react-icons/fa'
 import { IoIosConstruct } from 'react-icons/io'
-import { MdFrontLoader } from 'react-icons/md'
+
+const filterButton = {
+	id: 'filterButton',
+	type: 'filterButton',
+	actionButton: {
+		label: 'Zurücksetzen',
+		icon: <RiResetLeftFill size={18} />,
+	},
+	navigationButton: {
+		label: 'Weitere Filter',
+		href: '/moreFilters',
+		icon: <VscSettings size={18} />,
+	},
+}
 
 export const passengerCar = [
 	{
@@ -71,7 +84,7 @@ export const passengerCar = [
 		name: 'onlyElectricCars',
 		label: 'Nur Elektroautos',
 		type: 'checkbox',
-		icon: <MdOutlineEnergySavingsLeaf size={16} />,
+		icon: <MdEnergySavingsLeaf color='var(--color-dark-blue)' size={16} />,
 	},
 	{
 		id: 'submit_passenger',
@@ -79,20 +92,7 @@ export const passengerCar = [
 		type: 'submit',
 		icon: <IoSearch size={18} />,
 	},
-	{
-		id: 'reset_passenger',
-		label: 'Zurücksetzen',
-		type: 'reset',
-		icon: <RiResetLeftFill size={18} />,
-	},
-	{
-		id: 'link_passenger',
-		label: 'Weitere Filter',
-		href: '/moreFilters',
-		type: 'link',
-		ariaLabel: 'more filters',
-		icon: <VscSettings size={18} />,
-	},
+	filterButton,
 ]
 
 export const motorBikes = [
@@ -144,20 +144,7 @@ export const motorBikes = [
 		type: 'submit',
 		icon: <IoSearch size={18} />,
 	},
-	{
-		id: 'reset_motorBike',
-		label: 'Zurücksetzen',
-		type: 'reset',
-		icon: <RiResetLeftFill size={18} />,
-	},
-	{
-		id: 'link_motorBike',
-		label: 'Weitere Filter',
-		href: '/moreFilters',
-		type: 'link',
-		ariaLabel: 'more filters',
-		icon: <VscSettings size={18} />,
-	},
+	filterButton,
 ]
 
 export const eBikes = [
@@ -183,12 +170,16 @@ export const eBikes = [
 		id: 'frameSize_eBike',
 		name: 'frameSize',
 		label: 'Rahmengröße',
+		labelIcon: PiWarningCircleLight,
+		ariaLabel: 'frame size',
 		type: 'selector',
 	},
 	{
 		id: 'batteryCapacity_eBike',
 		name: 'batteryCapacity',
 		label: 'Akkukapazität ab',
+		labelIcon: PiWarningCircleLight,
+		ariaLabel: 'battery capacity',
 		type: 'selector',
 	},
 	{
@@ -209,20 +200,7 @@ export const eBikes = [
 		type: 'submit',
 		icon: <IoSearch size={18} />,
 	},
-	{
-		id: 'reset_eBike',
-		label: 'Zurücksetzen',
-		type: 'reset',
-		icon: <RiResetLeftFill size={18} />,
-	},
-	{
-		id: 'link_eBike',
-		label: 'Weitere Filter',
-		href: '/moreFilters',
-		type: 'link',
-		ariaLabel: 'more filters',
-		icon: <VscSettings size={18} />,
-	},
+	filterButton,
 ]
 
 export const miniTrucks = [
@@ -282,22 +260,7 @@ export const miniTrucks = [
 		type: 'submit',
 		icon: <IoSearch size={18} />,
 	},
-	{
-		id: 'miniTruckReset',
-		category: 'resetButton',
-		label: 'Zurücksetzen',
-		type: 'reset',
-		icon: <RiResetLeftFill size={18} />,
-	},
-	{
-		id: 'miniTruckMoreFilters',
-		category: 'link',
-		label: 'Weitere Filter',
-		href: '/moreFilters',
-		type: 'link',
-		ariaLabel: 'more filters',
-		icon: <VscSettings size={18} />,
-	},
+	filterButton,
 ]
 export const other = [
 	{
