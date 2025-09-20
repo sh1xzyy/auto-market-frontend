@@ -30,11 +30,13 @@ const Header = () => {
 								{windowWidth > 575 && (
 									<IconButton
 										icon={FaRegBell}
+										className='px-md py-md'
 										ariaLabel='Notifications button'
 									/>
 								)}
 								<IconButton
 									icon={GiHamburgerMenu}
+									className='px-md py-md'
 									onClick={() => setIsBurgerMenuOpen(true)}
 									ariaLabel='Burger Menu button'
 								/>

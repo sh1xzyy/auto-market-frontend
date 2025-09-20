@@ -4,7 +4,7 @@ const IconButton = ({
 	icon: Icon,
 	size = 20,
 	onClick,
-	className = 'px-md py-md',
+	className = '',
 	iconClassName = 'group-hover:fill-light-white',
 	ariaLabel,
 	children,
