@@ -1,11 +1,15 @@
+import AIHelperIntro from '@/components/AIHelperIntro/AIHelperIntro'
 import MainFilters from '@/components/MainFilters/MainFilters'
 
 export default function Home() {
 	return (
-		<div>
-			<section className='py-2sm'>
+		<>
+			<section className='py-2sm mt-[405px]'>
 				<MainFilters />
 			</section>
-		</div>
+			<section className='py-2sm'>
+				<AIHelperIntro />
+			</section>
+		</>
 	)
 }
