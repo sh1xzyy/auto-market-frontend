@@ -2,7 +2,7 @@ import IconButton from '../common/IconButton/IconButton'
 import clsx from 'clsx'
 import { vehicleList } from './vehicleList.data'
 
-const VehiclesList = ({ openIndex, setOpenIndex }) => {
+const VehiclesList = ({ openIndex, setOpenIndex, setIsOtherFiltersOpen }) => {
 	return (
 		<ul
 			className='flex justify-center md:min-w-[90px] md:flex-col'
@@ -11,8 +11,8 @@ const VehiclesList = ({ openIndex, setOpenIndex }) => {
 			{vehicleList.map(({ icon, ariaLabel }, i) => (
 				<li
 					className={clsx(
-						'border-r border-grey last:border-0 w-full md:border-b md:last:border-r',
-						openIndex === i && 'md:border-0 md:last:border-r-0'
+						'border-r border-b border-grey w-full md:border-b md:last:border-r md:last:border-b-0',
+						openIndex === i && 'border-b-0 md:border-0 md:last:border-r-0'
 					)}
 					key={i}
 				>
@@ -28,7 +28,10 @@ const VehiclesList = ({ openIndex, setOpenIndex }) => {
 						icon={icon}
 						size={30}
 						ariaLabel={ariaLabel}
-						onClick={() => setOpenIndex(i)}
+						onClick={() => {
+							setOpenIndex(i)
+							setIsOtherFiltersOpen(false)
+						}}
 					/>
 				</li>
 			))}
