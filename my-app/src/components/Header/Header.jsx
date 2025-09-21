@@ -21,7 +21,7 @@ const Header = () => {
 				<BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
 			)}
 			<div className='flex items-center h-[72px] bg-background-light-black'>
-				<Container>
+				<Container className='px-2lg'>
 					<nav className='flex items-center justify-between'>
 						<HeaderLogo />
 

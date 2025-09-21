@@ -22,8 +22,12 @@ const HeaderUserNavigationList = ({ windowWidth }) => {
 		<ul className='flex'>
 			{navigationList.map((item, i) => (
 				<li className='relative' key={i}>
-					{item.hasOwnProperty('src') ? (
-						<Link className='group block px-md py-md' href={item?.src}>
+					{item?.type === 'link' ? (
+						<Link
+							className='group block px-md py-md'
+							href={item?.src}
+							aria-label={item?.ariaLabel}
+						>
 							{item?.icon}
 						</Link>
 					) : (
