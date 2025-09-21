@@ -6,7 +6,7 @@ import Logo from './Logo'
 const AIHelperIntro = () => {
 	return (
 		<Container>
-			<div className='flex flex-col gap-2lg p-2lg w-full bg-background-light-black rounded-lg md:flex-row md:items-center md:p-xl'>
+			<div className='flex flex-col gap-2lg p-2lg w-full bg-background-light-black border border-grey lg:rounded-lg md:flex-row md:items-center md:p-xl'>
 				<div className='flex flex-col justify-center gap-md'>
 					<div className='flex items-center gap-md'>
 						<Logo />

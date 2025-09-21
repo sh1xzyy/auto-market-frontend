@@ -29,7 +29,7 @@ const MainFilters = () => {
 
 	return (
 		<Container>
-			<div className='md:flex w-full border border-grey md:rounded-2xl'>
+			<div className='md:flex w-full border border-grey lg:rounded-2xl'>
 				<VehiclesList
 					openIndex={openIndex}
 					setOpenIndex={setOpenIndex}

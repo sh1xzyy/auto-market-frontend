@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 const OtherVehiclesList = ({ list, setIsOtherFiltersOpen }) => {
 	return (
-		<ul className='w-full grid grid-cols-3 items-center md:grid-cols-5 bg-background-light-black md:p-md md:rounded-tr-2xl md:rounded-br-2xl'>
+		<ul className='w-full grid grid-cols-3 items-center md:grid-cols-5 bg-background-light-black md:p-md lg:rounded-tr-2xl lg:rounded-br-2xl'>
 			{list.map(({ id, label, icon }, i) => (
 				<li
 					className={clsx(

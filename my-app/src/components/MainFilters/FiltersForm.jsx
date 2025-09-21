@@ -24,7 +24,7 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
 			initialValues={initialValues}
 			onSubmit={values => console.log(values)}
 		>
-			<Form className='grid grid-cols-2 gap-2lg w-full items-center bg-background-light-black p-2lg sm:grid-cols-[156px_1fr_1fr_1fr] md:grid-cols-4 md:rounded-br-2xl md:rounded-tr-2xl'>
+			<Form className='grid grid-cols-2 gap-2lg w-full items-center bg-background-light-black p-2lg sm:grid-cols-[156px_1fr_1fr_1fr] md:grid-cols-4 lg:rounded-br-2xl lg:rounded-tr-2xl'>
 				{vehiclesFields[openIndex !== 4 ? openIndex : 5].map(item => (
 					<div
 						className={clsx(typeToClass[item?.type] || typeToClass[item?.id])}
