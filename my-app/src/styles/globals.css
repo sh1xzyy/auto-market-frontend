@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
+	--color-super-light-violet: rgb(226, 171, 255);
 	--color-light-violet: #68298a;
 	--color-dark-violet: rgb(79, 22, 110);
 	--color-light-blue: #465991;
@@ -12,10 +13,12 @@
 	--color-super-grey: #7e838f;
 	--color-overlay: #0a0d14a3;
 	--color-grey: rgb(42, 43, 51);
+	--color-grey-05: rgba(42, 43, 51, 0.5);
 	--color-light-orange: #db3000;
 	--color-dark-orange: #bf2a00;
 	--color-black: #14141a;
 	--color-dark-blue: #009ecf;
+	--color-light-green: #43a771;
 	--color-background-light-black: #1b1b21;
 	--color-background-dark-black: rgb(16, 16, 20);
 
@@ -30,6 +33,7 @@
 	--spacing-xs: 2px;
 	--spacing-sm: 4px;
 	--spacing-2sm: 7px;
+	--spacing-3md: 8px;
 	--spacing-md: 9px;
 	--spacing-2md: 12px;
 	--spacing-lg: 16px;
