@@ -22,7 +22,7 @@ export const sellDropDownMenu = [
 	{
 		title: 'Autobewertung',
 		thumb: {
-			src: '/common/car-rental.jpg',
+			src: '/header/car-rental.jpg',
 			alt: 'car-rental',
 		},
 		moreInfo: { label: 'Mehr Erfahren', src: '/artikel/elektromobilitaet' },

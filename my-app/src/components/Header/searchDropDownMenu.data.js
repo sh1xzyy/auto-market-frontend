@@ -22,7 +22,7 @@ export const searchDropDownMenu = [
 	{
 		title: 'E-Bikes',
 		thumb: {
-			src: '/common/e-bike.jpg',
+			src: '/header/e-bike.jpg',
 			alt: 'E-Bike',
 		},
 		moreInfo: { label: 'Mehr Erfahren', src: '/artikel/elektromobilitaet' },

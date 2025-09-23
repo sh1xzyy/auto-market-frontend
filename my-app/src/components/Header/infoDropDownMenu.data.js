@@ -21,7 +21,7 @@ export const infoDropDownMenu = [
 	{
 		title: 'Elektromobilität',
 		thumb: {
-			src: '/common/fueling-сar.jpg',
+			src: '/header/fueling-сar.jpg',
 			alt: 'fueling-car',
 		},
 		moreInfo: { label: 'Mehr Erfahren', src: '/artikel/elektromobilitaet' },
