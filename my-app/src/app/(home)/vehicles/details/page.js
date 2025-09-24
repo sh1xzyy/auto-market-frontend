@@ -3,7 +3,7 @@
 import CustomSwiper from '@/components/common/CustomSwiper/CustomSwiper'
 import { carData } from './carData.data'
 import Container from '@/components/common/Container/Container'
-import CarDetailsBasicInfo from '@/components/CarDetailsBasicInfo/CarDetailsBasicInfo'
+import CarOverview from '@/components/CarOverview/CarOverview'
 import useWindowWidth from '@/hooks/useWindowWidth'
 
 const Page = () => {
@@ -16,14 +16,14 @@ const Page = () => {
 
 					{windowWidth < 1014 && (
 						<section>
-							<CarDetailsBasicInfo data={carData} />
+							<CarOverview data={carData} />
 						</section>
 					)}
 				</div>
 
 				{windowWidth >= 1014 && (
 					<section>
-						<CarDetailsBasicInfo data={carData} />
+						<CarOverview data={carData} />
 					</section>
 				)}
 			</div>
