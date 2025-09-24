@@ -5,6 +5,10 @@ import MainImage from '@/components/MainImage/MainImage'
 export default function Home() {
 	return (
 		<>
+			<h1 className='visually-hidden'>
+				Go mobile. Find what&apos;s best for you - on Germany&apos;s biggest
+				vehicle marketplace
+			</h1>
 			<MainImage
 				src='/mainImage/main.jpg'
 				alt='go mobile. find whats best for you - on germans biggest vehicle marketplace'
