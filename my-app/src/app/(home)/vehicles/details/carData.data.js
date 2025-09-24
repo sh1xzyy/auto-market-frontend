@@ -12,6 +12,15 @@ export const carData = {
 		postalCode: 63110,
 		city: 'Rodgau',
 	},
+	specs: [
+		{ key: 'mileage', value: '116.188' },
+		{ key: 'performance', value: '135 kW (184 PS)' },
+		{ key: 'fuelType', value: 'Diesel' },
+		{ key: 'gearbox', value: 'automatic' },
+		{ key: 'initialRegistration', value: '04/2020' },
+		{ key: 'vehicleOwner', value: 1 },
+	],
+
 	images: [
 		'https://img.classistatic.de/api/v1/mo-prod/images/30/307140de-e90c-4744-b6ad-b133cc2311a8?rule=mo-1600',
 		'https://img.classistatic.de/api/v1/mo-prod/images/78/78a6d2b3-59a3-4c43-a088-b4cae6de9076?rule=mo-1600',
