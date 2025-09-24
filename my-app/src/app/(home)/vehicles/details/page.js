@@ -6,6 +6,7 @@ import Container from '@/components/common/Container/Container'
 import CarOverview from '@/components/CarOverview/CarOverview'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import CarSpecsSummary from '@/components/CarSpecsSummary/CarSpecsSummary'
+import CarTechnicalDetails from '@/components/CarTechnicalDetails/CarTechnicalDetails'
 
 const Page = () => {
 	const { windowWidth } = useWindowWidth()
@@ -25,6 +26,10 @@ const Page = () => {
 
 					<section className='mb-lg border-t border-b border-grey lg:border lg:rounded-lg'>
 						<CarSpecsSummary data={carData} />
+					</section>
+
+					<section className='mb-lg border-t border-b border-grey lg:border lg:rounded-lg'>
+						<CarTechnicalDetails data={carData} />
 					</section>
 				</div>
 
