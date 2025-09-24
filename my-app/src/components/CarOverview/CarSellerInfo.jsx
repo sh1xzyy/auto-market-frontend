@@ -10,7 +10,7 @@ const CarSellerInfo = ({ company, phone, location }) => {
 	return (
 		<div className='mb-3md'>
 			<Link href='/'>
-				<span>{company}</span>
+				<span>{company?.name}</span>
 			</Link>
 
 			<div className='text-md'>
