@@ -8,11 +8,19 @@ import useWindowWidth from '@/hooks/useWindowWidth'
 import CarSpecsSummary from '@/components/CarSpecsSummary/CarSpecsSummary'
 import CarTechnicalDetails from '@/components/CarTechnicalDetails/CarTechnicalDetails'
 import CarEquipment from '@/components/CarEquipment/CarEquipment'
+import Image from 'next/image'
 
 const Page = () => {
 	const { windowWidth } = useWindowWidth()
 	return (
 		<Container className='lg:px-2lg'>
+			<Image
+				className='w-full max-h-[329px] rounded-lg object-cover mb-3md'
+				src={carData?.company?.banner}
+				width={978}
+				height={326}
+				alt={carData?.company?.name}
+			/>
 			<div className='flex flex-col lg:flex-row lg:gap-2lg'>
 				<div>
 					<section className='lg:mb-lg'>

@@ -5,7 +5,11 @@ export const carData = {
 	netPrice: '20.167',
 	rentPrice: '260',
 	phone: '+380123456789',
-	company: 'Automobilhandelsgesellschaft Rodgau',
+	company: {
+		name: 'Automobilhandelsgesellschaft Rodgau',
+		banner:
+			'https://img.classistatic.de/api/v1/mo-prod/images/8b/8b434fcc-b4b4-4234-bf03-b0ec4f20acb7?rule=mo-1600',
+	},
 	stars: 5,
 	location: {
 		country: 'de',
