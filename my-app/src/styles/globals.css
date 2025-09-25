@@ -3,6 +3,7 @@
 
 @theme {
 	--color-super-light-violet: rgb(226, 171, 255);
+	--color-super-violet: #e2abff;
 	--color-light-violet: #68298a;
 	--color-dark-violet: rgb(79, 22, 110);
 	--color-light-blue: #465991;
@@ -39,7 +40,10 @@
 	--spacing-lg: 16px;
 	--spacing-2lg: 18px;
 	--spacing-xl: 24px;
-	--spacing-2xl: 36px;
+	--spacing-1xl: 27px;
+	--spacing-2xl: 32px;
+	--spacing-3xl: 36px;
+	--spacing-4xl: 54px;
 
 	/* Border radius */
 	--radius-sm: 4px;

@@ -9,6 +9,7 @@ const CarCompanyBanner = ({ data }) => {
 				width={978}
 				height={326}
 				alt={data?.company?.name}
+				priority
 			/>
 
 			<div className='absolute bottom-[5%] left-[1.5%] flex items-center w-[144px] h-[108px] rounded-lg p-lg bg-light-white'>
@@ -17,6 +18,7 @@ const CarCompanyBanner = ({ data }) => {
 					width={112}
 					height={46}
 					alt={data?.company?.name}
+					priority
 				/>
 			</div>
 		</div>
