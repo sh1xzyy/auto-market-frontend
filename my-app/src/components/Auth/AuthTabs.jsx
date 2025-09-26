@@ -15,7 +15,7 @@ const AuthTabs = ({ activeIndex, setActiveIndex }) => {
 				type='button'
 				onClick={() => setActiveIndex(0)}
 			>
-				EinLoggen
+				Einloggen
 			</button>
 			<button
 				className={clsx(

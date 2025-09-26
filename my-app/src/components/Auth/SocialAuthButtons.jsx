@@ -7,7 +7,7 @@ const SocialAuthButtons = ({ googleLabel, appleLabel }) => {
 	return (
 		<div className='flex flex-col gap-md mb-md'>
 			<button
-				className='flex items-center justify-center gap-2sm py-2lg px-xl border-2 border-super-light-violet  rounded-md text-super-violet sm:px-lg sm:py-2md sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet'
+				className='flex items-center justify-center gap-2sm py-2lg px-xl border-2 border-super-light-violet h-[56px] rounded-md text-super-violet sm:px-lg sm:py-2md sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet'
 				type='button'
 				onClick={() => console.log(googleLabel)}
 			>
@@ -15,7 +15,7 @@ const SocialAuthButtons = ({ googleLabel, appleLabel }) => {
 				<span className='font-bold sm:text-md'>{googleLabel}</span>
 			</button>
 			<button
-				className='flex items-center justify-center gap-2sm py-2lg px-xl border-2 border-super-light-violet  rounded-md text-super-violet sm:px-lg sm:py-2md sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet'
+				className='flex items-center justify-center gap-2sm py-2lg px-xl border-2 border-super-light-violet h-[56px] rounded-md text-super-violet sm:px-lg sm:py-2md sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet'
 				type='button'
 				onClick={() => console.log(appleLabel)}
 			>

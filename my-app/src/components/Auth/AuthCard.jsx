@@ -16,7 +16,7 @@ const AuthCard = () => {
 		<div>
 			<div className='mb-1xl bg-background-light-black border border-grey md:rounded-lg md:border md:border-grey'>
 				<AuthTabs activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-				<div className='p-1xl md:p-3xl'>
+				<div className='px-2lg py-1xl md:p-3xl'>
 					<AuthTitle
 						title={
 							activeIndex === 0
