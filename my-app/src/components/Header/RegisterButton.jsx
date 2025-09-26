@@ -1,11 +1,17 @@
-const RegisterButton = () => {
+import clsx from 'clsx'
+import Link from 'next/link'
+
+const RegisterButton = ({ className = '' }) => {
 	return (
-		<button
-			className='h-[36px] w-full text-md px-md py-md font-bold rounded-md bg-light-violet transition linear duration-300 hover:bg-dark-violet'
-			type='button'
+		<Link
+			href='/auth'
+			className={clsx(
+				'flex items-center justify-center h-[36px] w-full px-2md py-3md font-bold rounded-md bg-light-violet transition linear duration-300 hover:bg-dark-violet',
+				className
+			)}
 		>
-			Anmelden
-		</button>
+			<span className='text-md'>Anmelden</span>
+		</Link>
 	)
 }
 

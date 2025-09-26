@@ -8,7 +8,7 @@ const BurgerDropDownMenuCategoryItemList = ({ list }) => {
 				<li key={i} className='border-b border-grey last:border-0'>
 					<Link
 						className={clsx(
-							'leading-6 block font-medium py-2lg pl-2xl pr-2lg focus:shadow-card',
+							'leading-6 block font-medium py-2lg pl-3xl pr-2lg focus:shadow-card',
 							isNew && 'flex items-center gap-sm'
 						)}
 						href={src}

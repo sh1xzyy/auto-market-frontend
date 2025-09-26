@@ -5,7 +5,7 @@ const BurgerDropDownMenuCategoryList = ({ list }) => {
 		<ul>
 			{list.map((item, i) => (
 				<li key={i} className='flex flex-col'>
-					<span className='block text-sm text-dark-grey px-2xl mt-md'>
+					<span className='block text-sm text-dark-grey px-3xl mt-md'>
 						{item.title}
 					</span>
 					<BurgerDropDownMenuCategoryItemList list={item.list} />

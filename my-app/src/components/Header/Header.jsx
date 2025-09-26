@@ -11,13 +11,17 @@ import BurgerMenu from './BurgerMenu'
 import HeaderMainNavigationList from './HeaderMainNavigationList'
 import HeaderUserNavigationList from './HeaderUserNavigationList'
 import HeaderLogo from './HeaderLogo'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
 	const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
 	const { windowWidth } = useWindowWidth()
+	const pathname = usePathname()
+
+	const isPathAuth = pathname === '/auth'
 	return (
 		<>
-			{isBurgerMenuOpen && (
+			{isBurgerMenuOpen && !isPathAuth && (
 				<BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
 			)}
 			<div className='flex items-center h-[72px] bg-background-light-black'>
@@ -25,7 +29,7 @@ const Header = () => {
 					<nav className='flex items-center justify-between'>
 						<HeaderLogo />
 
-						{windowWidth <= 755 && (
+						{windowWidth <= 755 && !isPathAuth && (
 							<div>
 								{windowWidth > 575 && (
 									<IconButton
@@ -43,16 +47,12 @@ const Header = () => {
 							</div>
 						)}
 
-						{windowWidth > 755 && (
+						{windowWidth > 755 && !isPathAuth && (
 							<>
 								<HeaderMainNavigationList />
-								<div className='flex'>
+								<div className='flex items-center'>
 									<HeaderUserNavigationList windowWidth={windowWidth} />
-									{windowWidth >= 1014 && (
-										<div className='ml-lg'>
-											<RegisterButton />
-										</div>
-									)}
+									{windowWidth >= 1014 && <RegisterButton className='ml-lg' />}
 								</div>
 							</>
 						)}
