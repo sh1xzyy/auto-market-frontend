@@ -1,4 +1,5 @@
 import AIHelperIntro from '@/components/AIHelperIntro/AIHelperIntro'
+import DealsForYou from '@/components/DealsForYou/DealsForYou'
 import MainFilters from '@/components/MainFilters/MainFilters'
 import MainImage from '@/components/MainImage/MainImage'
 
@@ -18,6 +19,9 @@ export default function Home() {
 			</section>
 			<section className='py-2sm'>
 				<AIHelperIntro />
+			</section>
+			<section className='py-2sm'>
+				<DealsForYou />
 			</section>
 		</>
 	)

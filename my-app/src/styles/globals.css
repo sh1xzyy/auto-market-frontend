@@ -7,6 +7,7 @@
 	--color-light-violet: #68298a;
 	--color-dark-violet: rgb(79, 22, 110);
 	--color-light-blue: #465991;
+	--color-dark-blue: #242c59;
 	--color-light-white: #ffffff;
 	--color-dark-white: #e6eaf0;
 	--color-light-grey: rgb(185, 191, 199);
@@ -17,9 +18,13 @@
 	--color-grey-05: rgba(42, 43, 51, 0.5);
 	--color-light-orange: #db3000;
 	--color-dark-orange: #bf2a00;
+	--color-super-light-orange: #ff6c3b;
+	--color-light-yellow: #edc568;
 	--color-black: #14141a;
 	--color-dark-blue: #009ecf;
 	--color-light-green: #43a771;
+	--color-dark-green: #35855a;
+	--color-super-dark-green: #256141;
 	--color-background-light-black: #1b1b21;
 	--color-background-dark-black: rgb(16, 16, 20);
 
@@ -114,21 +119,29 @@
 	}
 }
 
-/* Базовый стиль для скроллбара */
 .custom-scroll::-webkit-scrollbar {
-	width: 8px; /* ширина полосы прокрутки */
+	width: 8px;
 }
 
-/* Цвет дорожки */
 .custom-scroll::-webkit-scrollbar-track {
 	background: var(--color-grey);
 	border-radius: 10px;
 }
 
-/* Цвет бегунка */
 .custom-scroll::-webkit-scrollbar-thumb {
 	background: var(--color-super-grey);
 	border-radius: 10px;
+}
+
+.hidden-scroll {
+	overflow-y: scroll;
+	scrollbar-width: none; /* для Firefox */
+	-ms-overflow-style: none;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+	width: 0;
+	height: 0;
 }
 
 .dropDownAnimation {

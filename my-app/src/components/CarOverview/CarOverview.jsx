@@ -11,6 +11,7 @@ const CarOverview = ({
 	data: {
 		name,
 		description,
+		fairPrice,
 		grossPrice,
 		netPrice,
 		rentPrice,
@@ -29,7 +30,11 @@ const CarOverview = ({
 				windowWidth={windowWidth}
 			/>
 
-			<CarPriceInfo grossPrice={grossPrice} netPrice={netPrice} />
+			<CarPriceInfo
+				grossPrice={grossPrice}
+				fairPrice={fairPrice}
+				netPrice={netPrice}
+			/>
 
 			<CarFinancing rentPrice={rentPrice} />
 

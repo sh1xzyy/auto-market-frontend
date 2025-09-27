@@ -1,32 +1,16 @@
 'use client'
 
-import clsx from 'clsx'
 import IconButton from '../common/IconButton/IconButton'
 import { PiWarningCircleLight } from 'react-icons/pi'
+import FairPriceBar from '../common/FairPriceBar/FairPriceBar'
 
-const fairPrice = [true, true, true, false, false]
-
-const CarPriceInfo = ({ grossPrice, netPrice }) => {
+const CarPriceInfo = ({ grossPrice, fairPrice, netPrice }) => {
 	return (
 		<div className='mb-lg'>
 			<div className='flex items-center gap-lg'>
 				<span className='text-xl font-black'>{grossPrice} €</span>
 				<div className='flex gap-md'>
-					<div>
-						<div className='flex items-center gap-sm'>
-							{fairPrice.map((el, i) => (
-								<span
-									className={clsx(
-										'w-[17px] h-[8px]',
-										el && 'bg-light-green',
-										!el && 'bg-grey'
-									)}
-									key={i}
-								></span>
-							))}
-						</div>
-						<span className='text-sm text-dark-grey'>Fairer Preis</span>
-					</div>
+					<FairPriceBar fairPrice={fairPrice} className='w-[17px] h-[8px]' />
 					<IconButton
 						icon={PiWarningCircleLight}
 						size={16}

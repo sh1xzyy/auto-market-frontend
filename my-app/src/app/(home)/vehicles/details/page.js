@@ -1,6 +1,5 @@
 'use client'
 
-import CustomSwiper from '@/components/common/CustomSwiper/CustomSwiper'
 import { carData } from './carData.data'
 import Container from '@/components/common/Container/Container'
 import CarOverview from '@/components/CarOverview/CarOverview'
@@ -10,6 +9,7 @@ import CarTechnicalDetails from '@/components/CarTechnicalDetails/CarTechnicalDe
 import CarEquipment from '@/components/CarEquipment/CarEquipment'
 import CarGoBackButton from '@/components/CarGoBackButton/CarGoBackButton'
 import CarCompanyBanner from '@/components/CarCompanyBanner/CarCompanyBanner'
+import CarImageSwiper from '@/components/CarImageSwiper/CarImageSwiper'
 
 const Page = () => {
 	const { windowWidth } = useWindowWidth()
@@ -23,7 +23,7 @@ const Page = () => {
 				<div className='flex flex-col lg:flex-row lg:gap-2lg'>
 					<div>
 						<section className='lg:mb-lg'>
-							<CustomSwiper data={carData} />
+							<CarImageSwiper data={carData} />
 						</section>
 
 						{windowWidth < 1014 && (
