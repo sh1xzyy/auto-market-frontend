@@ -1,6 +1,7 @@
 export const carData = {
 	name: 'Audi A3',
 	description: 'Limousine40TDI qu./Sx S line/MATRIX/VITUAL',
+	fairPrice: 5,
 	grossPrice: '23.999',
 	netPrice: '20.167',
 	rentPrice: '260',
