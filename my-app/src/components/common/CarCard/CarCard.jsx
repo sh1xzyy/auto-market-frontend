@@ -1,10 +1,10 @@
 import { RiParkingBoxLine } from 'react-icons/ri'
-import IconButton from '../common/IconButton/IconButton'
 import CarCardPrice from './CarCardPrice'
 import CarCardImage from './CarCardImage'
 import CarCardSpecs from './CarCardSpecs'
 import CarCardLocation from './CarCardLocation'
 import Link from 'next/link'
+import IconButton from '../IconButton/IconButton'
 
 const CarCard = ({ item }) => {
 	return (

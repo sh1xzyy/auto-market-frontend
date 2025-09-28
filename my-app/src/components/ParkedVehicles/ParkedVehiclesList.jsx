@@ -1,14 +1,13 @@
 'use client'
 
-import { useState } from 'react'
-import CustomSwiper from '../common/CustomSwiper/CustomSwiper'
-import { cars } from './cars.data'
-import SpecialOfferCard from './SpecialOfferCard'
 import { SwiperSlide } from 'swiper/react'
+import CustomSwiper from '../common/CustomSwiper/CustomSwiper'
+import { parkedVehicles } from './parkedVehicles.data'
+import { useState } from 'react'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import CarCard from '../common/CarCard/CarCard'
 
-const DealsList = ({ openIndex }) => {
+const ParkedVehiclesList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const { windowWidth } = useWindowWidth()
 
@@ -30,13 +29,13 @@ const DealsList = ({ openIndex }) => {
 			showButtonsCondition={windowWidth >= 1014}
 			showPrevButtonCondition={activeIndex > 0}
 		>
-			{cars[openIndex].list?.map((item, i) => (
+			{parkedVehicles?.map((item, i) => (
 				<SwiperSlide key={i}>
-					{i === 0 ? <SpecialOfferCard item={item} /> : <CarCard item={item} />}
+					<CarCard item={item} />
 				</SwiperSlide>
 			))}
 		</CustomSwiper>
 	)
 }
 
-export default DealsList
+export default ParkedVehiclesList
