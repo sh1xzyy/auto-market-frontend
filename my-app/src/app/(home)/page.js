@@ -1,5 +1,6 @@
 import AIHelperIntro from '@/components/AIHelperIntro/AIHelperIntro'
 import DealsForYou from '@/components/DealsForYou/DealsForYou'
+import LastViewed from '@/components/LastViewed/LastViewed'
 import MainFilters from '@/components/MainFilters/MainFilters'
 import MainImage from '@/components/MainImage/MainImage'
 import ParkedVehicles from '@/components/ParkedVehicles/ParkedVehicles'
@@ -31,6 +32,10 @@ export default function Home() {
 
 			<section className='py-2sm'>
 				<ParkedVehicles />
+			</section>
+
+			<section className='py-2sm'>
+				<LastViewed />
 			</section>
 		</>
 	)

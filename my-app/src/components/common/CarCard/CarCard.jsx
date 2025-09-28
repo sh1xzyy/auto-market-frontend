@@ -18,7 +18,7 @@ const CarCard = ({ item }) => {
 			/>
 			<Link href='/vehicles/details'>
 				<CarCardImage item={item} />
-				<div className='flex flex-col gap-y-3md'>
+				<div className='flex flex-col gap-3md'>
 					<span className='font-bold'>{item?.title}</span>
 					<CarCardPrice item={item} />
 					<CarCardSpecs item={item} />
