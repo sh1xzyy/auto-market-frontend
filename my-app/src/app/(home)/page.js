@@ -4,6 +4,7 @@ import LastViewed from '@/components/LastViewed/LastViewed'
 import MainFilters from '@/components/MainFilters/MainFilters'
 import MainImage from '@/components/MainImage/MainImage'
 import ParkedVehicles from '@/components/ParkedVehicles/ParkedVehicles'
+import SelectedCategories from '@/components/SelectedCategories/SelectedCategories'
 
 export default function Home() {
 	return (
@@ -36,6 +37,10 @@ export default function Home() {
 
 			<section className='py-2sm'>
 				<LastViewed />
+			</section>
+
+			<section className='py-2sm'>
+				<SelectedCategories />
 			</section>
 		</>
 	)

@@ -84,7 +84,7 @@ export const passengerCar = [
 		name: 'onlyElectricCars',
 		label: 'Nur Elektroautos',
 		type: 'checkbox',
-		icon: <MdEnergySavingsLeaf color='var(--color-dark-blue)' size={16} />,
+		icon: <MdEnergySavingsLeaf color='var(--color-blue)' size={16} />,
 	},
 	{
 		id: 'submit_passenger',

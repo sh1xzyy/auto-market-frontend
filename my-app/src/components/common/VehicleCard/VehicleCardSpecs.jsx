@@ -1,4 +1,4 @@
-const CarCardSpecs = ({ item }) => {
+const VehicleCardSpecs = ({ item }) => {
 	return (
 		<ul className='flex flex-wrap gap-3md'>
 			{item?.specs?.map((spec, i) => (
@@ -10,4 +10,4 @@ const CarCardSpecs = ({ item }) => {
 	)
 }
 
-export default CarCardSpecs
+export default VehicleCardSpecs

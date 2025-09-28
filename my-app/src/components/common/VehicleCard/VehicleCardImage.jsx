@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const CarCardImage = ({ item }) => {
+const VehicleCardImage = ({ item }) => {
 	return (
 		<div className='relative w-full h-[168px] mb-3md '>
 			{item?.image ? (
@@ -23,4 +23,4 @@ const CarCardImage = ({ item }) => {
 	)
 }
 
-export default CarCardImage
+export default VehicleCardImage

@@ -1,6 +1,6 @@
 import { IoLocationOutline } from 'react-icons/io5'
 
-const CarCardLocation = ({ location }) => {
+const VehicleCardLocation = ({ location }) => {
 	return (
 		<div className='flex items-center gap-sm text-sm text-dark-grey'>
 			<IoLocationOutline size={16} />
@@ -16,4 +16,4 @@ const CarCardLocation = ({ location }) => {
 	)
 }
 
-export default CarCardLocation
+export default VehicleCardLocation

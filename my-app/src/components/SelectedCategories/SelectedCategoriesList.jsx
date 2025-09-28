@@ -4,10 +4,10 @@ import { SwiperSlide } from 'swiper/react'
 import CustomSwiper from '../common/CustomSwiper/CustomSwiper'
 import { useState } from 'react'
 import useWindowWidth from '@/hooks/useWindowWidth'
-import VehicleCard from '../common/VehicleCard/VehicleCard'
-import { lastViewed } from './lastViewed.data'
+import VehicleTypeCard from '../common/VehicleTypeCard/VehicleTypeCard'
+import { selectedCategories } from './selectedCategories.data'
 
-const LastViewedList = () => {
+const SelectedCategoriesList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const { windowWidth } = useWindowWidth()
 
@@ -16,26 +16,28 @@ const LastViewedList = () => {
 			setActiveIndex={setActiveIndex}
 			settings={{
 				spaceBetween: 16,
-				slidesPerView: 1,
+				slidesPerView: 2,
 				breakpoints: {
-					400: { slidesPerView: 2 },
-					640: { slidesPerView: 3 },
+					400: { slidesPerView: 3 },
+					600: { slidesPerView: 4 },
 					1014: {
-						slidesPerView: 4,
+						slidesPerView: 4.3,
 						spaceBetween: 24,
+						slidesPerGroup: 4,
 					},
 				},
 			}}
 			showButtonsCondition={windowWidth >= 1014}
 			showPrevButtonCondition={activeIndex > 0}
+			showNextButtonCondition={activeIndex < selectedCategories.length - 4}
 		>
-			{lastViewed?.map((item, i) => (
+			{selectedCategories?.map((item, i) => (
 				<SwiperSlide key={i}>
-					<VehicleCard item={item} />
+					<VehicleTypeCard item={item} />
 				</SwiperSlide>
 			))}
 		</CustomSwiper>
 	)
 }
 
-export default LastViewedList
+export default SelectedCategoriesList

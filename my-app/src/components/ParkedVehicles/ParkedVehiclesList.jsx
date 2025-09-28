@@ -5,7 +5,7 @@ import CustomSwiper from '../common/CustomSwiper/CustomSwiper'
 import { parkedVehicles } from './parkedVehicles.data'
 import { useState } from 'react'
 import useWindowWidth from '@/hooks/useWindowWidth'
-import CarCard from '../common/CarCard/CarCard'
+import VehicleCard from '../common/VehicleCard/VehicleCard'
 
 const ParkedVehiclesList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
@@ -18,7 +18,7 @@ const ParkedVehiclesList = () => {
 				spaceBetween: 16,
 				slidesPerView: 1,
 				breakpoints: {
-					470: { slidesPerView: 2 },
+					400: { slidesPerView: 2 },
 					640: { slidesPerView: 3 },
 					1014: {
 						slidesPerView: 4,
@@ -31,7 +31,7 @@ const ParkedVehiclesList = () => {
 		>
 			{parkedVehicles?.map((item, i) => (
 				<SwiperSlide key={i}>
-					<CarCard item={item} />
+					<VehicleCard item={item} />
 				</SwiperSlide>
 			))}
 		</CustomSwiper>

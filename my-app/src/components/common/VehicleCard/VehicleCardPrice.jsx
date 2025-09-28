@@ -1,6 +1,6 @@
 import FairPriceBar from '../FairPriceBar/FairPriceBar'
 
-const CarCardPrice = ({ item }) => {
+const VehicleCardPrice = ({ item }) => {
 	return (
 		<div className='flex items-end gap-sm'>
 			<div className='flex flex-col'>
@@ -18,4 +18,4 @@ const CarCardPrice = ({ item }) => {
 	)
 }
 
-export default CarCardPrice
+export default VehicleCardPrice

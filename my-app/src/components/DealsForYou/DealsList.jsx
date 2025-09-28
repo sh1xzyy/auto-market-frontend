@@ -6,7 +6,7 @@ import { cars } from './cars.data'
 import SpecialOfferCard from './SpecialOfferCard'
 import { SwiperSlide } from 'swiper/react'
 import useWindowWidth from '@/hooks/useWindowWidth'
-import CarCard from '../common/CarCard/CarCard'
+import VehicleCard from '../common/VehicleCard/VehicleCard'
 
 const DealsList = ({ openIndex }) => {
 	const [activeIndex, setActiveIndex] = useState(0)
@@ -19,7 +19,7 @@ const DealsList = ({ openIndex }) => {
 				spaceBetween: 16,
 				slidesPerView: 1,
 				breakpoints: {
-					470: { slidesPerView: 2 },
+					400: { slidesPerView: 2 },
 					640: { slidesPerView: 3 },
 					1014: {
 						slidesPerView: 4,
@@ -32,7 +32,11 @@ const DealsList = ({ openIndex }) => {
 		>
 			{cars[openIndex].list?.map((item, i) => (
 				<SwiperSlide key={i}>
-					{i === 0 ? <SpecialOfferCard item={item} /> : <CarCard item={item} />}
+					{i === 0 ? (
+						<SpecialOfferCard item={item} />
+					) : (
+						<VehicleCard item={item} />
+					)}
 				</SwiperSlide>
 			))}
 		</CustomSwiper>
