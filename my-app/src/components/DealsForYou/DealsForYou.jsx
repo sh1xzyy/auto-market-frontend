@@ -5,17 +5,18 @@ import { useState } from 'react'
 import DealsList from './DealsList'
 import DealsTabs from './DealsTabs'
 import Container from '../common/Container/Container'
+import ContentCard from '../common/ContentCard/ContentCard'
 
 const DealsForYou = () => {
 	const [openIndex, setOpenIndex] = useState(0)
 
 	return (
 		<Container>
-			<div className='p-lg bg-background-light-black border-t border-b border-grey lg:border lg:rounded-lg lg:p-2xl'>
-				<Title title='Deals für Dich' />
+			<ContentCard>
+				<Title className='mb-lg' title='Deals für Dich' />
 				<DealsTabs openIndex={openIndex} setOpenIndex={setOpenIndex} />
 				<DealsList openIndex={openIndex} />
-			</div>
+			</ContentCard>
 		</Container>
 	)
 }

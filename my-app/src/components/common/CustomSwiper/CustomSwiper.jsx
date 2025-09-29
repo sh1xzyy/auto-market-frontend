@@ -12,6 +12,7 @@ const CustomSwiper = ({
 	settings,
 	showButtonsCondition = true,
 	showPrevButtonCondition = true,
+	showNextButtonCondition = true,
 }) => {
 	return (
 		<Swiper
@@ -25,7 +26,7 @@ const CustomSwiper = ({
 			{showButtonsCondition && (
 				<>
 					{showPrevButtonCondition && <SwiperSlideButton type='prev' />}
-					<SwiperSlideButton type='next' />
+					{showNextButtonCondition && <SwiperSlideButton type='next' />}
 				</>
 			)}
 		</Swiper>

@@ -1,6 +1,10 @@
-const Title = ({ title }) => {
+import clsx from 'clsx'
+
+const Title = ({ title, className }) => {
 	return (
-		<h2 className='mb-lg text-xl font-extrabold leading-[32px]'>{title}</h2>
+		<h2 className={clsx('text-xl font-extrabold leading-[32px]', className)}>
+			{title}
+		</h2>
 	)
 }
 

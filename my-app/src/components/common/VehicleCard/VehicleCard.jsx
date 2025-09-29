@@ -1,12 +1,12 @@
 import { RiParkingBoxLine } from 'react-icons/ri'
-import IconButton from '../common/IconButton/IconButton'
-import CarCardPrice from './CarCardPrice'
-import CarCardImage from './CarCardImage'
-import CarCardSpecs from './CarCardSpecs'
-import CarCardLocation from './CarCardLocation'
+import VehicleCardPrice from './VehicleCardPrice'
+import VehicleCardImage from './VehicleCardImage'
+import VehicleCardSpecs from './VehicleCardSpecs'
+import VehicleCardLocation from './VehicleCardLocation'
 import Link from 'next/link'
+import IconButton from '../IconButton/IconButton'
 
-const CarCard = ({ item }) => {
+const VehicleCard = ({ item }) => {
 	return (
 		<div className='relative w-full max-w-[260px]'>
 			<IconButton
@@ -17,16 +17,16 @@ const CarCard = ({ item }) => {
 				onClick={() => console.log('added to favorite')}
 			/>
 			<Link href='/vehicles/details'>
-				<CarCardImage item={item} />
-				<div className='flex flex-col gap-y-3md'>
+				<VehicleCardImage item={item} />
+				<div className='flex flex-col gap-3md'>
 					<span className='font-bold'>{item?.title}</span>
-					<CarCardPrice item={item} />
-					<CarCardSpecs item={item} />
-					<CarCardLocation location={item?.location} />
+					<VehicleCardPrice item={item} />
+					<VehicleCardSpecs item={item} />
+					<VehicleCardLocation location={item?.location} />
 				</div>
 			</Link>
 		</div>
 	)
 }
 
-export default CarCard
+export default VehicleCard
