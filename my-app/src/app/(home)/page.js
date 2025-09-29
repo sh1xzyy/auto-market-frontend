@@ -5,6 +5,7 @@ import MainFilters from '@/components/MainFilters/MainFilters'
 import MainImage from '@/components/MainImage/MainImage'
 import ParkedVehicles from '@/components/ParkedVehicles/ParkedVehicles'
 import PopularBrands from '@/components/PopularBrands/PopularBrands'
+import PopularBrandsAndMore from '@/components/PopularBrandsAndMore/PopularBrandsAndMore'
 import SelectedCategories from '@/components/SelectedCategories/SelectedCategories'
 
 export default function Home() {
@@ -46,6 +47,10 @@ export default function Home() {
 
 			<section className='py-2sm'>
 				<PopularBrands />
+			</section>
+
+			<section className='py-2sm'>
+				<PopularBrandsAndMore />
 			</section>
 		</>
 	)

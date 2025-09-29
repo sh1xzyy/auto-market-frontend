@@ -7,7 +7,7 @@ const PopularBrands = () => {
 	return (
 		<Container>
 			<ContentCard>
-				<Title title='Beliebte Automarken' />
+				<Title className='mb-lg' title='Beliebte Automarken' />
 				<PopularBrandsList />
 			</ContentCard>
 		</Container>
