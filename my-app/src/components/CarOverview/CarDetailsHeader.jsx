@@ -3,7 +3,7 @@
 import IconButton from '../common/IconButton/IconButton'
 import { IoShareSocial } from 'react-icons/io5'
 
-const CarDetailsHeader = ({ name, description, windowWidth }) => {
+const CarDetailsHeader = ({ name, description, isDesktop }) => {
 	return (
 		<div className='flex items-center justify-between mb-lg'>
 			<div>
@@ -12,7 +12,7 @@ const CarDetailsHeader = ({ name, description, windowWidth }) => {
 					{description}
 				</p>
 			</div>
-			{windowWidth < 1014 && (
+			{!isDesktop && (
 				<IconButton
 					icon={IoShareSocial}
 					size={16}

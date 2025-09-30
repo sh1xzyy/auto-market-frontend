@@ -17,7 +17,7 @@ const CheckboxField = () => {
 			>
 				<div
 					className={clsx(
-						'flex justify-center items-center w-[20px] h-[20px] border border-light-grey rounded-sm  transition-colors linear duration-300',
+						'flex justify-center items-center w-[20px] h-[20px] border border-light-grey rounded-xs  transition-colors linear duration-300',
 						isChecked && 'bg-light-violet border-0'
 					)}
 				>

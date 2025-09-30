@@ -14,37 +14,35 @@ const CarOverview = ({
 		fairPrice,
 		grossPrice,
 		netPrice,
-		rentPrice,
+		monthlyRate,
 		phone,
 		company,
 		location,
 	},
 }) => {
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
 
 	return (
 		<div className='p-lg font-bold bg-background-light-black lg:rounded-lg'>
 			<CarDetailsHeader
 				name={name}
 				description={description}
-				windowWidth={windowWidth}
+				isDesktop={isDesktop}
 			/>
-
 			<CarPriceInfo
 				grossPrice={grossPrice}
 				fairPrice={fairPrice}
 				netPrice={netPrice}
 			/>
+			<CarFinancing monthlyRate={monthlyRate} />
 
-			<CarFinancing rentPrice={rentPrice} />
-
-			{windowWidth >= 1014 && <hr className='my-lg text-grey' />}
-
-			{windowWidth >= 1014 && (
+			{isDesktop && <hr className='my-lg text-grey' />}
+			{isDesktop && (
 				<CarSellerInfo company={company} phone={phone} location={location} />
 			)}
 
-			<CarContactActions phone={phone} windowWidth={windowWidth} />
+			<CarContactActions phone={phone} isDesktop={isDesktop} />
 		</div>
 	)
 }

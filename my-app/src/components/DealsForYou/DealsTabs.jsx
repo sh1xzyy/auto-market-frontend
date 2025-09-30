@@ -20,7 +20,7 @@ const DealsTabs = ({ openIndex, setOpenIndex }) => {
 				<SwiperSlide className='!w-fit' key={i}>
 					<button
 						className={clsx(
-							'flex items-center justify-center w-full h-[36px] px-2md py-3md rounded-sm transition-colors linear duration-300',
+							'flex items-center justify-center w-full h-[36px] px-2md py-3md rounded-xs transition-colors linear duration-300',
 							openIndex !== i &&
 								'bg-background-light-black border-2 border-black hover:border-grey',
 							openIndex === i && 'bg-black hover:bg-grey'

@@ -14,7 +14,7 @@ const Checkbox = ({ item }) => {
 					name={item?.name}
 					checked={isChecked}
 				/>
-				<div className='flex justify-center items-center w-[20px] h-[20px] rounded-sm border border-dark-grey'>
+				<div className='flex justify-center items-center w-[20px] h-[20px] rounded-xs border border-dark-grey'>
 					{isChecked && <GrFormCheckmark size={20} />}
 				</div>
 				{item?.label}
