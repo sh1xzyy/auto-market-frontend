@@ -6,6 +6,8 @@ import { GrFormCheckmark } from 'react-icons/gr'
 
 const CarList = ({ data, isListOpen }) => {
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
+
 	return (
 		<ul
 			className={clsx(
@@ -18,7 +20,7 @@ const CarList = ({ data, isListOpen }) => {
 					<li
 						className={clsx(
 							'flex items-center justify-between font-bold text-md p-md h-[36px]',
-							windowWidth < 1014 && 'even:bg-black',
+							!isDesktop && 'even:bg-black',
 							(i % 4 === 2 || i % 4 === 3) && 'lg:bg-black'
 						)}
 						key={i}

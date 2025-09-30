@@ -3,6 +3,7 @@
 
 @theme {
 	--color-super-light-violet: rgb(226, 171, 255);
+	--color-super-light-violet-border: rgb(151, 92, 184);
 	--color-super-violet: #e2abff;
 	--color-light-violet: #68298a;
 	--color-dark-violet: rgb(79, 22, 110);
@@ -15,10 +16,13 @@
 	--color-super-grey: #7e838f;
 	--color-overlay: #0a0d14a3;
 	--color-grey: rgb(42, 43, 51);
+	--color-sponsored-background-grey: rgb(66, 69, 79);
+	--color-sponsored-border-grey: rgb(93, 97, 107);
 	--color-grey-05: rgba(42, 43, 51, 0.5);
 	--color-light-orange: #db3000;
 	--color-dark-orange: #bf2a00;
 	--color-super-light-orange: #ff6c3b;
+	--color-red-orange: rgb(255, 143, 102);
 	--color-light-yellow: #edc568;
 	--color-black: #14141a;
 	--color-blue: #009ecf;
@@ -51,7 +55,8 @@
 	--spacing-4xl: 54px;
 
 	/* Border radius */
-	--radius-sm: 4px;
+	--radius-xs: 4px;
+	--radius-sm: 6px;
 	--radius-md: 8px;
 	--radius-lg: 16px;
 

@@ -13,20 +13,21 @@ import CarImageSwiper from '@/components/CarImageSwiper/CarImageSwiper'
 
 const Page = () => {
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
 
 	return (
-		<div className='py-3md'>
+		<div className='lg:py-3md'>
 			<Container className='lg:px-2lg'>
-				<CarCompanyBanner data={carData} />
+				{isDesktop && <CarCompanyBanner data={carData} />}
+				{isDesktop && <CarGoBackButton />}
 
-				<CarGoBackButton />
 				<div className='flex flex-col lg:flex-row lg:gap-2lg'>
 					<div>
 						<section className='lg:mb-lg'>
 							<CarImageSwiper data={carData} />
 						</section>
 
-						{windowWidth < 1014 && (
+						{!isDesktop && (
 							<section className='mb-lg border-b border-grey'>
 								<CarOverview data={carData} />
 							</section>
@@ -45,7 +46,7 @@ const Page = () => {
 						</section>
 					</div>
 
-					{windowWidth >= 1014 && (
+					{isDesktop && (
 						<section>
 							<CarOverview data={carData} />
 						</section>

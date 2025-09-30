@@ -10,6 +10,7 @@ import VehicleCard from '../common/VehicleCard/VehicleCard'
 const ParkedVehiclesList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
 
 	return (
 		<CustomSwiper
@@ -26,7 +27,7 @@ const ParkedVehiclesList = () => {
 					},
 				},
 			}}
-			showButtonsCondition={windowWidth >= 1014}
+			showButtonsCondition={isDesktop}
 			showPrevButtonCondition={activeIndex > 0}
 		>
 			{parkedVehicles?.map((item, i) => (

@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { PiWarningCircleLight } from 'react-icons/pi'
 import IconButton from '../common/IconButton/IconButton'
 
-const CarFinancing = ({ rentPrice }) => {
+const CarFinancing = ({ monthlyRate }) => {
 	return (
 		<div className='mb-3md'>
 			<div className='flex items-center gap-sm mb-3md'>
-				<span className='text-md'>ab {rentPrice} € mtl.</span>
+				<span className='text-md'>ab {monthlyRate} € mtl.</span>
 				<IconButton
 					className='p-sm'
 					icon={PiWarningCircleLight}

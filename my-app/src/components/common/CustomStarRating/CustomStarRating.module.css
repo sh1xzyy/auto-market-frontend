@@ -1,0 +1,8 @@
+.wrapper :global(svg) {
+	display: inline-block !important;
+}
+
+.wrapper :global(.star-container) {
+	display: inline-flex !important;
+	flex-direction: row !important;
+}

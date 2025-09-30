@@ -10,6 +10,7 @@ import { selectedCategories } from './selectedCategories.data'
 const SelectedCategoriesList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
 
 	return (
 		<CustomSwiper
@@ -27,7 +28,7 @@ const SelectedCategoriesList = () => {
 					},
 				},
 			}}
-			showButtonsCondition={windowWidth >= 1014}
+			showButtonsCondition={isDesktop}
 			showPrevButtonCondition={activeIndex > 0}
 			showNextButtonCondition={activeIndex < selectedCategories.length - 4}
 		>

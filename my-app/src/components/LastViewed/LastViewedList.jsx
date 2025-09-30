@@ -10,6 +10,7 @@ import { lastViewed } from './lastViewed.data'
 const LastViewedList = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const { windowWidth } = useWindowWidth()
+	const isDesktop = windowWidth >= 1014
 
 	return (
 		<CustomSwiper
@@ -26,7 +27,7 @@ const LastViewedList = () => {
 					},
 				},
 			}}
-			showButtonsCondition={windowWidth >= 1014}
+			showButtonsCondition={isDesktop}
 			showPrevButtonCondition={activeIndex > 0}
 		>
 			{lastViewed?.map((item, i) => (
