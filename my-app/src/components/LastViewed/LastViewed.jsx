@@ -6,8 +6,8 @@ import LastViewedList from './LastViewedList'
 const LastViewed = () => {
 	return (
 		<Container>
-			<ContentCard>
-				<Title className='mb-lg' title='Zuletzt angesehen' />
+			<ContentCard className='lg:p-xl'>
+				<Title className='mb-lg text-xl' title='Zuletzt angesehen' />
 				<LastViewedList />
 			</ContentCard>
 		</Container>

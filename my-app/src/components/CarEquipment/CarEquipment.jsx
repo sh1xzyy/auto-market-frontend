@@ -4,15 +4,16 @@ import { useState } from 'react'
 import CarList from './CarList'
 import CarTitle from './CarTitle'
 import CarActionButton from './CarActionButton'
+import ContentCard from '../common/ContentCard/ContentCard'
 
 const CarEquipment = ({ data }) => {
 	const [isListOpen, setIsListOpen] = useState(false)
 	return (
-		<div className='p-lg pb-0 h-full bg-background-light-black lg:rounded-lg'>
+		<ContentCard>
 			<CarTitle title='Ausstattung' />
 			<CarList data={data} isListOpen={isListOpen} />
 			<CarActionButton isListOpen={isListOpen} setIsListOpen={setIsListOpen} />
-		</div>
+		</ContentCard>
 	)
 }
 

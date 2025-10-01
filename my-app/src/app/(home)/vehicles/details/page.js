@@ -28,20 +28,20 @@ const Page = () => {
 						</section>
 
 						{!isDesktop && (
-							<section className='mb-lg border-b border-grey'>
+							<section className='mb-lg'>
 								<CarOverview data={carData} />
 							</section>
 						)}
 
-						<section className='mb-lg border-t border-b border-grey lg:border lg:rounded-lg'>
+						<section className='mb-lg'>
 							<CarSpecsSummary data={carData} />
 						</section>
 
-						<section className='mb-lg border-t border-b border-grey lg:border lg:rounded-lg'>
+						<section className='mb-lg'>
 							<CarTechnicalDetails data={carData} />
 						</section>
 
-						<section className='mb-lg border-t border-b border-grey lg:border lg:rounded-lg'>
+						<section className='mb-lg'>
 							<CarEquipment data={carData} />
 						</section>
 					</div>

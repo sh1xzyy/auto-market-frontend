@@ -6,7 +6,7 @@ import ParkedVehiclesHeader from './ParkedVehiclesHeader'
 const ParkedVehicles = () => {
 	return (
 		<Container>
-			<ContentCard>
+			<ContentCard className='lg:p-xl'>
 				<ParkedVehiclesHeader />
 				<ParkedVehiclesList />
 			</ContentCard>

@@ -25,6 +25,7 @@
 	--color-red-orange: rgb(255, 143, 102);
 	--color-light-yellow: #edc568;
 	--color-black: #14141a;
+	--color-super-black: #101014;
 	--color-blue: #009ecf;
 	--color-light-green: #43a771;
 	--color-dark-green: #35855a;
@@ -42,9 +43,11 @@
 	/* Spacing (margin/padding) */
 	--spacing-xs: 2px;
 	--spacing-sm: 4px;
+	--spacing-1sm: 6px;
 	--spacing-2sm: 7px;
 	--spacing-3md: 8px;
 	--spacing-md: 9px;
+	--spacing-1md: 10px;
 	--spacing-2md: 12px;
 	--spacing-lg: 16px;
 	--spacing-2lg: 18px;

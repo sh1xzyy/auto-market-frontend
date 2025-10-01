@@ -12,48 +12,51 @@ import FilterVehicleEquipment from './FilterVehicleEquipment'
 import FilterVehicleImage from './FilterVehicleImage'
 import FilterVehiclePrice from './FilterVehiclePrice'
 import FilterVehicleInsurance from './FilterVehicleInsurance'
+import Container from '../Container/Container'
 
 const FilterVehicleCard = ({ item }) => {
 	const { windowWidth } = useWindowWidth()
 	const isDesktop = windowWidth >= 1014
 
 	return (
-		<ContentCard className='relative overflow-hidden'>
-			<Link href='/vehicles/details'>
-				{item?.isTop && <TopBadge />}
-				<div className='flex lg:flex gap-lg'>
-					<FilterVehicleImage item={item} />
+		<Container>
+			<ContentCard className='relative overflow-hidden'>
+				<Link href='/vehicles/details'>
+					{item?.isTop && <TopBadge />}
+					<div className='flex lg:flex gap-lg'>
+						<FilterVehicleImage item={item} />
 
-					<div className='flex flex-col'>
-						<FilterVehicleSummary item={item} isDesktop={isDesktop} />
-						<FilterVehiclePrice item={item} isDesktop={isDesktop} />
-						{isDesktop && (
-							<>
-								<FilterVehicleInsurance item={item} />
-								{item?.specs && <FilterVehicleSpecs item={item} />}
-								{item?.equipment && <FilterVehicleEquipment item={item} />}
-							</>
-						)}
+						<div className='flex flex-col'>
+							<FilterVehicleSummary item={item} isDesktop={isDesktop} />
+							<FilterVehiclePrice item={item} isDesktop={isDesktop} />
+							{isDesktop && (
+								<>
+									<FilterVehicleInsurance item={item} />
+									{item?.specs && <FilterVehicleSpecs item={item} />}
+									{item?.equipment && <FilterVehicleEquipment item={item} />}
+								</>
+							)}
+						</div>
 					</div>
-				</div>
-				{!isDesktop && (
-					<>
-						{item?.specs && <FilterVehicleSpecs item={item} />}
-						{item?.equipment && <FilterVehicleEquipment item={item} />}
-					</>
-				)}
-				{!isDesktop && (
-					<FilterVehicleSellerInfo item={item} isDesktop={isDesktop} />
-				)}
-			</Link>
+					{!isDesktop && (
+						<>
+							{item?.specs && <FilterVehicleSpecs item={item} />}
+							{item?.equipment && <FilterVehicleEquipment item={item} />}
+						</>
+					)}
+					{!isDesktop && (
+						<FilterVehicleSellerInfo item={item} isDesktop={isDesktop} />
+					)}
+				</Link>
 
-			<div className='mt-lg lg:flex lg:items-center lg:justify-between pt-lg border-t border-grey'>
-				{isDesktop && (
-					<FilterVehicleSellerInfo item={item} isDesktop={isDesktop} />
-				)}
-				<FilterVehicleActions item={item} isDesktop={isDesktop} />
-			</div>
-		</ContentCard>
+				<div className='mt-lg lg:flex lg:items-center lg:justify-between pt-lg border-t border-grey'>
+					{isDesktop && (
+						<FilterVehicleSellerInfo item={item} isDesktop={isDesktop} />
+					)}
+					<FilterVehicleActions item={item} isDesktop={isDesktop} />
+				</div>
+			</ContentCard>
+		</Container>
 	)
 }
 

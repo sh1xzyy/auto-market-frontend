@@ -4,7 +4,7 @@ const ContentCard = ({ children, className }) => {
 	return (
 		<div
 			className={clsx(
-				'p-lg bg-background-light-black border-t border-b border-grey lg:border lg:rounded-lg lg:p-xl',
+				'p-lg bg-background-light-black border-t border-b border-grey lg:border lg:rounded-lg',
 				className
 			)}
 		>
