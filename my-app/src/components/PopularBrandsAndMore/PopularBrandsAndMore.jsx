@@ -6,9 +6,9 @@ import PopularBrandsAndMoreList from './PopularBrandsAndMoreList'
 const PopularBrandsAndMore = () => {
 	return (
 		<Container>
-			<ContentCard>
+			<ContentCard className='lg:p-xl'>
 				<Title
-					className='mb-lg'
+					className='mb-lg text-xl'
 					title='Beliebte Automarken und mehr auf unserem Fahrzeugmarkt'
 				/>
 				<PopularBrandsAndMoreList />

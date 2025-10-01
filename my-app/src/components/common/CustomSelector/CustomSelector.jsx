@@ -15,7 +15,7 @@ const customStyles = {
 		fontSize: 'var(--text-md)',
 		cursor: 'pointer',
 		minHeight: '36px',
-		maxHeight: '36px',
+		minWidth: '100%',
 		backgroundColor: 'var(--color-grey)',
 	}),
 	option: base => ({
@@ -40,15 +40,22 @@ const customStyles = {
 	}),
 }
 
-export const CustomSelector = ({ name, id, placeholder }) => {
+export const CustomSelector = ({
+	name,
+	id,
+	placeholder,
+	options = groupedOptions,
+	settings,
+}) => {
 	return (
 		<Select
-			options={groupedOptions}
+			options={options}
 			styles={customStyles}
 			name={name}
 			id={id}
 			instanceId={id}
 			placeholder={placeholder}
+			{...settings}
 		/>
 	)
 }

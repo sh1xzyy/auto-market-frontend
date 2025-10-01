@@ -1,16 +1,19 @@
 import FilterVehicleCard from '@/components/common/FilterVehicleCard/FilterVehicleCard'
 import { carsData } from './carsData.data'
-import Container from '@/components/common/Container/Container'
+import SearchPanel from '@/components/SearchPanel/SearchPanel'
 
 const Page = () => {
 	return (
-		<section>
-			<Container>
+		<>
+			<section className='mb-lg'>
+				<SearchPanel />
+			</section>
+			<section className='mb-lg'>
 				{carsData?.map((item, i) => (
 					<FilterVehicleCard key={i} item={item} />
 				))}
-			</Container>
-		</section>
+			</section>
+		</>
 	)
 }
 

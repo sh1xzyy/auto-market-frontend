@@ -12,8 +12,8 @@ const DealsForYou = () => {
 
 	return (
 		<Container>
-			<ContentCard>
-				<Title className='mb-lg' title='Deals für Dich' />
+			<ContentCard className='lg:p-xl'>
+				<Title className='mb-lg text-xl' title='Deals für Dich' />
 				<DealsTabs openIndex={openIndex} setOpenIndex={setOpenIndex} />
 				<DealsList openIndex={openIndex} />
 			</ContentCard>

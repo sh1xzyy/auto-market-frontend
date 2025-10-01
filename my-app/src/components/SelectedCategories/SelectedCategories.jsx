@@ -6,8 +6,8 @@ import SelectedCategoriesList from './SelectedCategoriesList'
 const SelectedCategories = () => {
 	return (
 		<Container>
-			<ContentCard>
-				<Title className='mb-lg' title='Ausgewählte Kategorien' />
+			<ContentCard className='lg:p-xl'>
+				<Title className='mb-lg text-xl' title='Ausgewählte Kategorien' />
 				<SelectedCategoriesList />
 			</ContentCard>
 		</Container>

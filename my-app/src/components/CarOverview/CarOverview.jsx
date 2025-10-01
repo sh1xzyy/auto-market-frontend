@@ -6,6 +6,7 @@ import CarFinancing from './CarFinancing'
 import CarContactActions from './CarContactActions'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import CarSellerInfo from './CarSellerInfo'
+import ContentCard from '../common/ContentCard/ContentCard'
 
 const CarOverview = ({
 	data: {
@@ -24,7 +25,7 @@ const CarOverview = ({
 	const isDesktop = windowWidth >= 1014
 
 	return (
-		<div className='p-lg font-bold bg-background-light-black lg:rounded-lg'>
+		<ContentCard>
 			<CarDetailsHeader
 				name={name}
 				description={description}
@@ -43,7 +44,7 @@ const CarOverview = ({
 			)}
 
 			<CarContactActions phone={phone} isDesktop={isDesktop} />
-		</div>
+		</ContentCard>
 	)
 }
 

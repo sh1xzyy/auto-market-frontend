@@ -7,7 +7,7 @@ import ContentCard from '../common/ContentCard/ContentCard'
 const AIHelperIntro = () => {
 	return (
 		<Container>
-			<ContentCard>
+			<ContentCard className='lg:p-xl'>
 				<div className='flex flex-col gap-2lg md:flex-row md:items-center'>
 					<div className='flex flex-col justify-center gap-md'>
 						<div className='flex items-center gap-md'>

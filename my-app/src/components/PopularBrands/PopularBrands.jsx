@@ -6,8 +6,8 @@ import PopularBrandsList from './PopularBrandsList'
 const PopularBrands = () => {
 	return (
 		<Container>
-			<ContentCard>
-				<Title className='mb-lg' title='Beliebte Automarken' />
+			<ContentCard className='lg:p-xl'>
+				<Title className='mb-lg text-xl' title='Beliebte Automarken' />
 				<PopularBrandsList />
 			</ContentCard>
 		</Container>
